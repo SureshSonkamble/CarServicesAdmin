@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+ <include layout="@layout/toolbar_home"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="30dp">
+            <ProgressBar
+                android:id="@+id/pg"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:layout_width="50dp"
+                android:layout_height="10dp" />
+            <TextView
+                android:textSize="20dp"
+                android:text="Select Route"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <Spinner
+                android:id="@+id/spinner_route"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/edit_text_bottom"
+                android:padding="5dp"
+                />
+            <TextView
+                android:textSize="20dp"
+                android:text="Select Area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <Spinner
+                android:id="@+id/spinner_area"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/edit_text_bottom"
+                android:padding="5dp"
+                />
+       <ImageView
+                android:background="@drawable/edittextborder_new"
+                android:id="@+id/iv"
+                android:layout_width="180dp"
+                android:layout_height="160dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/car" />
+
+            <Button
+                android:background="@color/colorPrimary"
+                android:id="@+id/btn_take_pic"
+                style="@style/buttons_primary"
+                android:textColor="@color/white"
+                android:layout_below="@+id/ll_login"
+                android:layout_marginTop="30dp"
+                android:text="Select or Capture Image"
+                android:typeface="monospace" />
+            <EditText
+                android:id="@+id/edt_service_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_middle"
+                android:hint="Service Center Name"
+                android:padding="15dp"/>
+            <EditText
+                android:inputType="number"
+                android:id="@+id/edt_service_mob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_middle"
+                android:hint="Service Center Mobile"
+                android:maxLength="10"
+                android:padding="15dp" />
+            <EditText
+                android:id="@+id/edt_service_addr"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/edit_text_top"
+                android:hint="Service Center Full Address"
+                android:inputType="textMultiLine"
+                android:padding="15dp" />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:enabled="false"
+                    android:id="@+id/edt_open_time"
+                    android:layout_width="275dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_middle"
+                    android:hint="Open Time"
+                    android:padding="15dp"/>
+                <ImageView
+                    android:id="@+id/img_open_time"
+                    android:src="@drawable/watch"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:enabled="false"
+                    android:id="@+id/edt_close_time"
+                    android:layout_width="275dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_middle"
+                    android:hint="Close Time"
+                    android:padding="15dp"/>
+                <ImageView
+                    android:id="@+id/img_close_time"
+                    android:src="@drawable/watch"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"/>
+
+            </LinearLayout>
+            <EditText
+                android:id="@+id/edt_service_off_day"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_middle"
+                android:hint="Off Day"
+                android:padding="15dp"/>
+
+            <Button
+                android:background="@color/colorPrimary"
+                android:id="@+id/btn_add_services"
+                style="@style/buttons_primary"
+                android:layout_below="@+id/ll_login"
+                android:layout_marginTop="30dp"
+                android:text="Add Services Center"
+                android:typeface="monospace" />
+
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

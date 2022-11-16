@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            >
+            <ProgressBar
+                android:id="@+id/pg"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:layout_width="50dp"
+                android:layout_height="10dp" />
+            <LinearLayout
+                android:layout_marginTop="40dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:src="@drawable/placeholder"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center_horizontal"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:padding="10dp"
+                    android:background="#FFFFFF"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@+id/edit_linaer"
+                        android:padding="10dp">
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:background="@drawable/edit_text_border"
+                            android:paddingLeft="10dp"
+                            android:drawablePadding="5dp"
+                            android:hint="Route From"
+                            android:inputType="textEmailAddress"
+                            android:id="@+id/edit_route_from"
+                            android:textColorHint="@color/blackcolour"
+                            android:textColor="@color/blackcolour"
+                            />
+
+                        <EditText
+                            android:layout_marginTop="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:background="@drawable/edit_text_border"
+                            android:paddingLeft="10dp"
+                            android:drawablePadding="5dp"
+                            android:hint="Route To"
+                            android:inputType="textPassword"
+                            android:id="@+id/edit_route_to"
+                            android:textColorHint="@color/blackcolour"
+                            android:textColor="@color/blackcolour"
+                            />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btn_add_route"
+                        android:layout_width="200dp"
+                        android:layout_height="40dp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:text="Add Route"
+                        android:textColor="@color/whitecolour"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/edittext_border"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
